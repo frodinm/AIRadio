@@ -1,0 +1,68 @@
+Arguments: 
+  /Users/frodinm/.nvm/versions/node/v8.9.4/bin/node /usr/local/Cellar/yarn/1.5.1_1/libexec/bin/yarn.js start
+
+PATH: 
+  /Users/frodinm/flutter/bin:/Users/frodinm/.nvm/versions/node/v8.9.4/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/MacGPG2/bin:/Users/frodinm/flutter/bin:/Users/frodinm/Library/Android/sdk/tools:/Users/frodinm/Library/Android/sdk/platform-tools:/Users/frodinm/.composer/vendor/bin:/Users/frodinm/Library/Android/sdk/tools:/Users/frodinm/Library/Android/sdk/platform-tools:/Users/frodinm/.composer/vendor/bin
+
+Yarn version: 
+  1.5.1
+
+Node version: 
+  8.9.4
+
+Platform: 
+  darwin x64
+
+npm manifest: 
+  {
+    "name": "server",
+    "version": "1.0.0",
+    "description": "",
+    "main": "server.js",
+    "scripts": {
+      "start": "node ./server.js",
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "bcrypt": "^1.0.3",
+      "body-parser": "^1.18.2",
+      "cors": "^2.8.4",
+      "dotenv": "^5.0.1",
+      "express": "^4.16.3",
+      "express-session": "^1.15.6",
+      "feathers-memory": "^2.1.1",
+      "http": "0.0.0",
+      "mongodb": "^3.0.5",
+      "mongoose": "^5.0.12",
+      "morgan": "^1.9.0",
+      "passport": "^0.4.0",
+      "passport-local": "^1.0.0",
+      "passport-local-mongoose": "^5.0.0",
+      "request": "^2.85.0",
+      "socket.io": "^2.1.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: Command failed.
+  Exit code: 1
+  Command: sh
+  Arguments: -c node ./server.js
+  Directory: /Users/frodinm/Documents/AIRadio/server
+  Output:
+  
+      at ProcessTermError.MessageError (/usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:186:110)
+      at new ProcessTermError (/usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:226:113)
+      at ChildProcess.<anonymous> (/usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:30281:17)
+      at emitTwo (events.js:126:13)
+      at ChildProcess.emit (events.js:214:7)
+      at maybeClose (internal/child_process.js:925:16)
+      at Process.ChildProcess._handle.onexit (internal/child_process.js:209:5)

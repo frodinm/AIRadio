@@ -1,12 +1,11 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import SocketIOClient from 'socket.io-client';
 
 
 export default class App extends React.Component {
   constructor(){
     super();
-    console.log(SocketIOClient.Socket);
+  
   }
   render() {
     return (
