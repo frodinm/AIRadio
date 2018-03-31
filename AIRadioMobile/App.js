@@ -1,11 +1,12 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-
+import React from "react";
+import { StyleSheet, Text, View } from "react-native";
+import SocketIOClient from "socket.io-client";
 
 export default class App extends React.Component {
-  constructor(){
+  constructor() {
     super();
-  
+    // Creating the socket-client instance will automatically connect to the server.
+    this.socket = SocketIOClient("https://9c1fa3c7.ngrok.io");
   }
   render() {
     return (
@@ -21,8 +22,8 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center"
+  }
 });
