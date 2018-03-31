@@ -42,6 +42,7 @@
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
 		BA7801F39B53991339645724 /* libPods-AIRadioMobile-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F084D8351FF6C96934586A0 /* libPods-AIRadioMobile-tvOSTests.a */; };
 		C366E90D107F018FF2C12C4C /* libPods-AIRadioMobile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F251D13F762814096848F446 /* libPods-AIRadioMobile.a */; };
+		C56B75BD206F704200A44375 /* libRNSVG.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C56B75BA206F702B00A44375 /* libRNSVG.a */; };
 		F65E802DA0F72B9006DBD8BB /* libPods-AIRadioMobileTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB95E5078952E13C79B107A /* libPods-AIRadioMobileTests.a */; };
 /* End PBXBuildFile section */
 
@@ -333,6 +334,20 @@
 			remoteGlobalIDString = 358F4ED71D1E81A9004DF814;
 			remoteInfo = RCTBlob;
 		};
+		C56B75B9206F702B00A44375 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C56B758D206F702A00A44375 /* RNSVG.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0CF68AC11AF0540F00FF9E5C;
+			remoteInfo = RNSVG;
+		};
+		C56B75BB206F702B00A44375 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C56B758D206F702A00A44375 /* RNSVG.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 94DDAC5C1F3D024300EED511;
+			remoteInfo = "RNSVG-tvOS";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -373,6 +388,7 @@
 		9BC162B933D3683A86D022CB /* Pods-AIRadioMobile-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AIRadioMobile-tvOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AIRadioMobile-tvOS/Pods-AIRadioMobile-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		AC81BC3FDAD3EF588C784D19 /* Pods-AIRadioMobileTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AIRadioMobileTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AIRadioMobileTests/Pods-AIRadioMobileTests.release.xcconfig"; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
+		C56B758D206F702A00A44375 /* RNSVG.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNSVG.xcodeproj; path = "../node_modules/react-native-svg/ios/RNSVG.xcodeproj"; sourceTree = "<group>"; };
 		CBB95E5078952E13C79B107A /* libPods-AIRadioMobileTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AIRadioMobileTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F19E451D22514D3F92D56C87 /* Pods-AIRadioMobileTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AIRadioMobileTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AIRadioMobileTests/Pods-AIRadioMobileTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F251D13F762814096848F446 /* libPods-AIRadioMobile.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AIRadioMobile.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -406,6 +422,7 @@
 				00C302E91ABCBA2D00DB3ED1 /* libRCTNetwork.a in Frameworks */,
 				139105C61AF99C1200B5F7CC /* libRCTSettings.a in Frameworks */,
 				832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */,
+				C56B75BD206F704200A44375 /* libRNSVG.a in Frameworks */,
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
 				C366E90D107F018FF2C12C4C /* libPods-AIRadioMobile.a in Frameworks */,
@@ -607,6 +624,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				C56B758D206F702A00A44375 /* RNSVG.xcodeproj */,
 				5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */,
 				146833FF1AC3E56700842450 /* React.xcodeproj */,
 				00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */,
@@ -663,6 +681,15 @@
 			children = (
 				ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */,
 				2D16E6721FA4F8DC00B85C8A /* libRCTBlob-tvOS.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C56B758E206F702B00A44375 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C56B75BA206F702B00A44375 /* libRNSVG.a */,
+				C56B75BC206F702B00A44375 /* libRNSVG-tvOS.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -863,6 +890,10 @@
 				{
 					ProductGroup = 079A99F1206EF0FA009B4E7D /* Products */;
 					ProjectRef = 079A99F0206EF0FA009B4E7D /* RNFetchBlob.xcodeproj */;
+				},
+				{
+					ProductGroup = C56B758E206F702B00A44375 /* Products */;
+					ProjectRef = C56B758D206F702A00A44375 /* RNSVG.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -1147,6 +1178,20 @@
 			fileType = archive.ar;
 			path = libRCTBlob.a;
 			remoteRef = ADBDB9261DFEBF0700ED6528 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C56B75BA206F702B00A44375 /* libRNSVG.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNSVG.a;
+			remoteRef = C56B75B9206F702B00A44375 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C56B75BC206F702B00A44375 /* libRNSVG-tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libRNSVG-tvOS.a";
+			remoteRef = C56B75BB206F702B00A44375 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
