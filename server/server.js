@@ -167,21 +167,75 @@ websocket.on("connection", socket => {
         .emotion(text)
         .then(response => {
           console.log("emotion", response);
-          // let anger = response.anger;
-          // let joy = response.joy;
-          // let fear = response.fear;
-          // let sadness = response.sadness;
-          // let surprise = response.surprise;
+          let anger = response.anger;
+          let joy = response.joy;
+          let fear = response.fear;
+          let sadness = response.sadness;
+          let surprise = response.surprise;
 
-          // board.on("ready", function() {
-          //   // Create an Led on pin 13
-          //   let redLed = new five.Led([7, 10, 13]);
-          //   let greenLed = new five.Led([11, 8, 5]);
-          //   let yellowLed = new five.Led([12, 9, 6]);
+          let emotions = [anger, joy, fear, sadness, surprise];
+          let emotionNames = ["anger", "joy", "fear", "sadness", "surprise"];
 
-          //   // Strobe the pin on/off, defaults to 100ms phases
-          //   led.strobe();
-          // });
+          let highestEmotionValue = 0;
+          let highestEmotion;
+          for (let i = 0; i < 5; i++) {
+            if (emotions[i] > highestEmotionValue) {
+              highestEmotionValue = emotions[i];
+              highestEmotion = emotionNames[i];
+            }
+          }
+
+          console.log(highestEmotion);
+
+          let redLed = [7, 10, 13];
+          let yellowLed = [6, 9, 12];
+          let greenLed = [5, 8, 11];
+
+          board.on("ready", function() {
+            //functions according to emotions
+            function type1(ledABC) {
+              var ledA = new five.Led(ledABC[0]);
+              var ledB = new five.Led(ledABC[1]);
+              var ledC = new five.Led(ledABC[2]);
+
+              ledA.strobe(1000);
+
+              setTimeout(() => {
+                ledB.strobe(1000);
+              }, 333);
+
+              setTimeout(() => {
+                ledC.strobe(1000);
+              }, 666);
+            }
+            function type2(ledABC) {
+              var ledA = new five.Led(ledABC[0]);
+              var ledB = new five.Led(ledABC[1]);
+              var ledC = new five.Led(ledABC[2]);
+
+              ledA.strobe(500);
+              ledB.strobe(500);
+              ledC.strobe(500);
+            }
+            if (highestEmotion === "joy") {
+              ledABC = greenLed;
+              type1(ledABC);
+            } else if (highestEmotion === "fear") {
+              ledABC = yellowLed;
+              type1(ledABC);
+            } else if (highestEmotion === "sadness") {
+              ledABC = redLed;
+              type1(ledABC);
+            } else if (highestEmotion === "surprise") {
+              ledABC = yellowLed;
+              type2(ledABC);
+            } else if (highestEmotion === "anger") {
+              ledABC = redLed;
+              type2(ledABC);
+            }
+            var motor = new five.Motor(3);
+            motor.start();
+          });
         })
         .catch(logError);
 
@@ -218,6 +272,79 @@ websocket.on("connection", socket => {
         .fer(image)
         .then(response => {
           console.log(response);
+          let anger = response.Anger;
+          let sad = response.Sad;
+          let neutral = response.Neutral;
+          let surprise = response.Surprise;
+          let fear = response.Fear;
+          let happy = response.Happy;
+
+          let emotions = [anger, sad, neutral, surprise, fear, happy];
+          let emotionNames = [
+            "anger",
+            "sad",
+            "neutral",
+            "surprise",
+            "fear",
+            "happy"
+          ];
+
+          let highestEmotionValue = 0;
+          let highestEmotion;
+          for (let i = 0; i < 5; i++) {
+            if (emotions[i] > highestEmotionValue) {
+              highestEmotionValue = emotions[i];
+              highestEmotion = emotionNames[i];
+            }
+          }
+
+          console.log(highestEmotion);
+
+          board.on("ready", function() {
+            //functions according to emotions
+            function type1(ledABC) {
+              var ledA = new five.Led(ledABC[0]);
+              var ledB = new five.Led(ledABC[1]);
+              var ledC = new five.Led(ledABC[2]);
+
+              ledA.strobe(1000);
+
+              setTimeout(() => {
+                ledB.strobe(1000);
+              }, 333);
+
+              setTimeout(() => {
+                ledC.strobe(1000);
+              }, 666);
+            }
+            function type2(ledABC) {
+              var ledA = new five.Led(ledABC[0]);
+              var ledB = new five.Led(ledABC[1]);
+              var ledC = new five.Led(ledABC[2]);
+
+              ledA.strobe(500);
+              ledB.strobe(500);
+              ledC.strobe(500);
+            }
+            if (highestEmotion === "happy") {
+              ledABC = greenLed;
+              type1(ledABC);
+            } else if (highestEmotion === "fear") {
+              ledABC = yellowLed;
+              type1(ledABC);
+            } else if (highestEmotion === "sad") {
+              ledABC = redLed;
+              type1(ledABC);
+            } else if (highestEmotion === "surprise") {
+              ledABC = yellowLed;
+              type2(ledABC);
+            } else if (highestEmotion === "angry") {
+              ledABC = redLed;
+              type2(ledABC);
+            }
+            var motor = new five.Motor(3);
+            motor.start();
+          });
         })
         .catch(logError);
 
