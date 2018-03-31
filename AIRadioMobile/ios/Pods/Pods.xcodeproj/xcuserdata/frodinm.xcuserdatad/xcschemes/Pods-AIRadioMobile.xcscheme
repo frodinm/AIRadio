@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'A50E96A65488F691D25297330F17CABE'
+               BlueprintIdentifier = '02EAD90D6CD7BBFDBF883BCB31ED41BD'
                BlueprintName = 'Pods-AIRadioMobile'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libPods-AIRadioMobile.a'>

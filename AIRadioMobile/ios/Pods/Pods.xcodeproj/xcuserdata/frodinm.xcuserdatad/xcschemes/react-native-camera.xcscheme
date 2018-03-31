@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'C3DC2B6E2CF8F36337FCF6B012660534'
+               BlueprintIdentifier = '80B422A0CD3A6C6F99AF204175F60C10'
                BlueprintName = 'react-native-camera'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libreact-native-camera.a'>
