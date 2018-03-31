@@ -9,6 +9,8 @@ PODS:
     - React
   - react-native-camera/RN (1.0.3):
     - React
+  - react-native-fetch-blob (0.10.6):
+    - React/Core
   - React/Core (0.54.4):
     - yoga (= 0.54.4.React)
   - React/DevSupport (0.54.4):
@@ -17,6 +19,9 @@ PODS:
   - React/fishhook (0.54.4)
   - React/RCTBlob (0.54.4):
     - React/Core
+  - React/RCTImage (0.54.4):
+    - React/Core
+    - React/RCTNetwork
   - React/RCTNetwork (0.54.4):
     - React/Core
   - React/RCTWebSocket (0.54.4):
@@ -25,15 +30,20 @@ PODS:
     - React/RCTBlob
   - React/tvOS (0.54.4):
     - React/Core
+  - RNVectorIcons (4.5.0):
+    - React
   - yoga (0.54.4.React)
 
 DEPENDENCIES:
   - react-native-camera (from `../node_modules/react-native-camera`)
+  - react-native-fetch-blob (from `../node_modules/react-native-fetch-blob`)
   - React/Core (from `../node_modules/react-native`)
   - React/DevSupport (from `../node_modules/react-native`)
+  - React/RCTImage (from `../node_modules/react-native`)
   - React/RCTNetwork (from `../node_modules/react-native`)
   - React/RCTWebSocket (from `../node_modules/react-native`)
   - React/tvOS (from `../node_modules/react-native`)
+  - RNVectorIcons (from `../node_modules/react-native-vector-icons`)
   - yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 EXTERNAL SOURCES:
@@ -41,14 +51,20 @@ EXTERNAL SOURCES:
     :path: ../node_modules/react-native
   react-native-camera:
     :path: ../node_modules/react-native-camera
+  react-native-fetch-blob:
+    :path: ../node_modules/react-native-fetch-blob
+  RNVectorIcons:
+    :path: ../node_modules/react-native-vector-icons
   yoga:
     :path: ../node_modules/react-native/ReactCommon/yoga
 
 SPEC CHECKSUMS:
   React: c237e42de9c70e5cac6eeb52b4cfd3a0910c1f00
   react-native-camera: ab22041dcf0403d88f2ae4b9ea3ed2644e680423
+  react-native-fetch-blob: 63394b1d7b0781547b3e4463b3195790177b1222
+  RNVectorIcons: c0dbfbf6068fefa240c37b0f71bd03b45dddac44
   yoga: 55da126afc384965b96bff46652464373b330add
 
-PODFILE CHECKSUM: b0bed32fcb7facef18b6d8f679483d2dd156afa7
+PODFILE CHECKSUM: 781ba8daa917530fe57c085277d6e2524b6b76ec
 
 COCOAPODS: 1.4.0

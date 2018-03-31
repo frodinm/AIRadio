@@ -137,12 +137,8 @@ android {
 }
 
 dependencies {
-<<<<<<< HEAD
     compile project(':react-native-svg')
-=======
     compile project(':react-native-vector-icons')
->>>>>>> 6bae76ea7940b9f01f56ef8c13e84d4a0279d3fe
-    compile project(':react-native-camera')
     compile (project(':react-native-camera')) {
         exclude group: "com.google.android.gms"
         compile 'com.android.support:exifinterface:25.+'

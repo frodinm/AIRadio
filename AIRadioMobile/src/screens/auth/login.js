@@ -13,6 +13,7 @@ import {
     ScrollView
 } from 'react-native';
 import RNFetchBlob from 'react-native-fetch-blob';
+import {VictoryPie} from 'victory-native';
 import {appConnection, Context} from '../../util';
 
 const {height, width} = Dimensions.get('window');
@@ -47,63 +48,35 @@ class Login extends React.Component {
     render() {
         return (
             <View style={styles.container}>
-                <VChart/>
-                <Text>AIRadio</Text>
+                
+                <View style={styles.chartContainter}>
+                    <Text style={{fontSize:30}}>Emotions chart</Text>
+                    <VictoryPie
+                        colorScale={['tomato', 'orange', 'gold', 'cyan', 'navy' ]}
+                        data={[
+                            { x: 'Cats', y: 35 },
+                            { x: 'Dogs', y: 40 },
+                            { x: 'Birds', y: 55 }
+                        ]}
+                        animate={{
+                            duration: 2000
+                        }}
+                        width={width/1.2}
+                        height={height/2}
+                        labelRadius={120}
+                        style={{ labels: { fill: 'black', fontSize: 18 } }}
+                    />
+                </View>
+               
                 <TextInput
                     placeholder="test"
                     style={styles.textInput}
                     onChangeText={text => this.setState({text})}/>
+                
                 <TouchableHighlight onPress={() => this.handlePersonnality(this.state.text)}>
-                    <Text>Submit</Text>
-                </TouchableHighlight>
-                <TouchableHighlight
-                    onPress={() => CameraRoll.getPhotos({first: 20, assetType: 'All'}).then(r => console.log(r))}>
-                    <Text>Camera Roll</Text>
-                </TouchableHighlight>
-                <Modal
-                    animationType={'slide'}
-                    transparent={false}
-                    visible={this.state.modalVisible}
-                    onRequestClose={() => console.log('closed')}>
-                    <View style={styles.modalContainer}>
-                        <Button title="Close" onPress={() => this.setModalVisible(false)}/>
-                        <ScrollView contentContainerStyle={styles.scrollView}>
-                            {this
-                                .state
-                                .images
-                                .map((p, i) => {
-                                    return (
-                                        <TouchableHighlight
-                                            style={{
-                                            opacity: i === this.state.index
-                                                ? 0.5
-                                                : 1
-                                        }}
-                                            key={i}
-                                            underlayColor="transparent"
-                                            onPress={() => this.handleSendImage(p.node.image.uri)}>
-                                            <Image
-                                                style={{
-                                                width: width / 3,
-                                                height: width / 3
-                                            }}
-                                                source={{
-                                                uri: p.node.image.uri
-                                            }}/>
-                                        </TouchableHighlight>
-                                    );
-                                })}
-                        </ScrollView>
+                    <View style={styles.submitButton}>
+                        <Text style={{color:'white',fontSize:20}}>Submit</Text>
                     </View>
-                </Modal>
-
-                <TouchableHighlight
-                    onPress={() => {
-                    CameraRoll
-                        .getPhotos({first: 20, assetType: 'All'})
-                        .then(r => this.setState({images: r.edges, modalVisible: true}));
-                }}>
-                    <Text>Show Modal</Text>
                 </TouchableHighlight>
             </View>
 
@@ -124,8 +97,37 @@ export default class LoginData extends React.Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center'
+        
+        alignItems: 'center',
+        backgroundColor: '#fafafa'
+    },
+    chartContainter:{
+        margin:20,
+        height:height/1.6,
+        width: width/1.1,
+        backgroundColor:'white',
+        shadowOffset: { width: 0, height: 3 },
+        shadowOpacity: 0.8,
+        shadowRadius: 2,
+        elevation: 2, 
+        justifyContent:'center',
+        alignItems:'center',
+        flexDirection:'column'
+    },
+    textInput:{
+        height: 50,
+        width:width/1.1,
+        borderWidth:1,
+        padding:10,
+        borderRadius:5
+    },
+    submitButton:{
+        margin:20,
+        backgroundColor: '#1660C4',
+        width:width/1.5,
+        height:50,
+        alignItems:'center',
+        justifyContent:'center'
     },
     modalContainer: {
         paddingTop: 20,

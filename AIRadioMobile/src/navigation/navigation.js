@@ -7,18 +7,23 @@ import {
 
 export const AppNavigator = new TabNavigator({
     app: {
-        screen: LoginScreen
+        screen: LoginScreen,
+        navigationOptions:{
+            tabBarLabel: 'Charts'
+        }
     },
     camera: {
         screen: CameraScreen,
         navigationOptions:{
-            header:null
+            header:null,
+            tabBarLabel: 'Camera'
         }
     },
     cameraRoll: {
         screen: CameraRoll,
         navigationOptions:{
-            header:null
+            header:null,
+            tabBarLabel: 'Your pictures'
         }
     },
 

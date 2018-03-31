@@ -13,6 +13,7 @@ target 'AIRadioMobile' do
   'tvOS',
   'RCTNetwork',
   'RCTWebSocket',
+  'RCTImage',
   # Add any other subspecs you want to use in your project
 ]
 
