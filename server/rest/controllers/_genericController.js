@@ -1,7 +1,5 @@
 var express = require('express');
 
-
-
 var createRouter = function(modelName, model, writable, viewMode){
     var router = express.Router();
     var theModel = model;

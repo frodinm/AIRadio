@@ -1,80 +1,361 @@
-require('dotenv').config();
-var express = require('express');
-var session = require('express-session');
-var bodyParser = require('body-parser');
-var cors = require('cors');
-var logger = require('morgan');
-var passport = require('passport');
-var LocalStrategy = require('passport-local').Strategy;
-var bcrypt = require('bcrypt');
+require("dotenv").config();
+var express = require("express");
+var session = require("express-session");
+var bodyParser = require("body-parser");
+var cors = require("cors");
+var http = require("http");
+var socketio = require("socket.io");
+
+var logger = require("morgan");
+var passport = require("passport");
+var LocalStrategy = require("passport-local").Strategy;
+var bcrypt = require("bcrypt");
+
+//AylienText
+// var AYLIENTextAPI = require("aylien_textapi");
+// var textapi = new AYLIENTextAPI({
+//   application_id: "658f3ba4",
+//   application_key: "e2b8dbac16bd83dcae95662206c50a15"
+// });
+
+// johnny - five;
+// var five = require("johnny-five"),
+//   board = new five.Board();
 
 var app = express();
 app.use(cors());
-app.use(logger('[:date[iso]] :method :url :status :response-time ms - :res[content-length]'));
+app.use(
+  logger(
+    "[:date[iso]] :method :url :status :response-time ms - :res[content-length]"
+  )
+);
 
+var server = http.Server(app);
+var websocket = socketio(server);
 
-var mongoose = require('mongoose');
-var dbName = 'AIRadio';
+var mongoose = require("mongoose");
+var dbName = "AIRadio";
 
-console.log('Connecting to database ' + dbName);
+var indico = require("indico.io");
+indico.apiKey = "443998e820c54357e3e65e8b5dd38e7c";
 
-mongoose.connect('mongodb://localhost:' + (process.env.DB_PORT || '27017') + '/' + dbName);
+var response = function(res) {
+  console.log(res);
+};
+var logError = function(err) {
+  console.log(err);
+};
 
-var models = require('./rest/models/_models');
-var genericControllers  = require('./rest/controllers/_genericController');
-var specificControllers = require('./rest/controllers/_specificControllers');
+console.log("Connecting to database " + dbName);
 
-const writable = process.env.writable === 'true' || true;
+mongoose.connect(
+  "mongodb://localhost:" + (process.env.DB_PORT || "27017") + "/" + dbName
+);
 
-console.log('AIRadio Database');
-console.log('Initializing ...');
-console.log('Throwing in some middlewares .... ');
+var models = require("./rest/models/_models");
+var genericControllers = require("./rest/controllers/_genericController");
+var specificControllers = require("./rest/controllers/_specificControllers");
+
+const writable = process.env.writable === "true" || true;
+
+console.log("AIRadio Database");
+console.log("Initializing ...");
+console.log("Throwing in some middlewares .... ");
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use(express.static('public'));
-app.use(session({ resave: true, saveUninitialized: true, 
-    secret: 'uwotm8' }));
+app.use(express.static("public"));
+app.use(
+  session({
+    resave: true,
+    saveUninitialized: true,
+    secret: "uwotm8"
+  })
+);
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.set('json spaces', 2);
+app.set("json spaces", 2);
 
-let Members = models['members'];
+let Members = models["members"];
 
-passport.use(new LocalStrategy(
-    function(username, password, done) {
-      Members.findOne({ username }, function(err, user) {
-        if (err) { return done(err); }
-        if (!user) {
-          return done(null, false, { message: 'Incorrect username.' });
-        }else{
-            bcrypt.compare(password, user.userPassword(), function(err, res) {
-                if (err) return done(null,false,{message: err});
-                if (res === false) {
-                  return done(null, false);
-                } else {
-                  return done(null, user);
-                }
-              });
-        }
-      });
-    }
-));
+passport.use(
+  new LocalStrategy(function(username, password, done) {
+    Members.findOne({ username }, function(err, user) {
+      if (err) {
+        return done(err);
+      }
+      if (!user) {
+        return done(null, false, { message: "Incorrect username." });
+      } else {
+        bcrypt.compare(password, user.userPassword(), function(err, res) {
+          if (err) return done(null, false, { message: err });
+          if (res === false) {
+            return done(null, false);
+          } else {
+            return done(null, user);
+          }
+        });
+      }
+    });
+  })
+);
 
 passport.serializeUser(Members.serializeUser());
 passport.deserializeUser(Members.deserializeUser());
 
-
-for(var model in models){
-    console.log('Registering model : ' + model);
-    app.use('/json/'+model+'/', genericControllers.createRouter(model, models[model], writable, 'json'));
+for (var model in models) {
+  console.log("Registering model : " + model);
+  app.use(
+    "/json/" + model + "/",
+    genericControllers.createRouter(model, models[model], writable, "json")
+  );
 }
 
-app.use('/member/', specificControllers.memberController('members',models['members'],writable,'json'));
-
+app.use(
+  "/member/",
+  specificControllers.memberController(
+    "members",
+    models["members"],
+    writable,
+    "json"
+  )
+);
 
 //Lets launch the service!
-app.listen(process.env.PORT || 5000, () => {
-    console.log('------ Server is running on port 5000! ------');
+server.listen(process.env.PORT || 5000, () => {
+  console.log(
+    `------ Server is running on port ${process.env.PORT || 5000} ------`
+  );
+});
+
+websocket.on("connection", socket => {
+  console.log("a user connected");
+
+  socket.emit("connection", "hello");
+
+  socket.on("disconnect", function() {
+    console.log("user disconnected");
+  });
+
+  //on receive text input
+  socket.on("text", text => {
+    console.log(text);
+    // text =
+    //   'Why would Kim Jong-un insult me by calling me "old," when I would NEVER call him "short and fat?" Oh well, I try so hard to be his friend - and maybe someday that will happen!';
+    if (text) {
+      console.log("received text:", text);
+
+      //personality
+      indico
+        .personality(text)
+        .then(response => {
+          console.log("personality", response);
+        })
+        .catch(logError);
+
+      //personas
+      indico
+        .personas(text)
+        .then(response => {
+          console.log("personas", response);
+        })
+        .catch(logError);
+
+      //emotion
+      indico
+        .emotion(text)
+        .then(response => {
+          console.log("emotion", response);
+          let anger = response.anger;
+          let joy = response.joy;
+          let fear = response.fear;
+          let sadness = response.sadness;
+          let surprise = response.surprise;
+
+          let emotions = [anger, joy, fear, sadness, surprise];
+          let emotionNames = ["anger", "joy", "fear", "sadness", "surprise"];
+
+          let highestEmotionValue = 0;
+          let highestEmotion;
+          for (let i = 0; i < 5; i++) {
+            if (emotions[i] > highestEmotionValue) {
+              highestEmotionValue = emotions[i];
+              highestEmotion = emotionNames[i];
+            }
+          }
+
+          console.log(highestEmotion);
+
+          let redLed = [7, 10, 13];
+          let yellowLed = [6, 9, 12];
+          let greenLed = [5, 8, 11];
+
+          board.on("ready", function() {
+            //functions according to emotions
+            function type1(ledABC) {
+              var ledA = new five.Led(ledABC[0]);
+              var ledB = new five.Led(ledABC[1]);
+              var ledC = new five.Led(ledABC[2]);
+
+              ledA.strobe(1000);
+
+              setTimeout(() => {
+                ledB.strobe(1000);
+              }, 333);
+
+              setTimeout(() => {
+                ledC.strobe(1000);
+              }, 666);
+            }
+            function type2(ledABC) {
+              var ledA = new five.Led(ledABC[0]);
+              var ledB = new five.Led(ledABC[1]);
+              var ledC = new five.Led(ledABC[2]);
+
+              ledA.strobe(500);
+              ledB.strobe(500);
+              ledC.strobe(500);
+            }
+            if (highestEmotion === "joy") {
+              ledABC = greenLed;
+              type1(ledABC);
+            } else if (highestEmotion === "fear") {
+              ledABC = yellowLed;
+              type1(ledABC);
+            } else if (highestEmotion === "sadness") {
+              ledABC = redLed;
+              type1(ledABC);
+            } else if (highestEmotion === "surprise") {
+              ledABC = yellowLed;
+              type2(ledABC);
+            } else if (highestEmotion === "anger") {
+              ledABC = redLed;
+              type2(ledABC);
+            }
+            var motor = new five.Motor(3);
+            motor.start();
+          });
+        })
+        .catch(logError);
+
+      //political
+      indico
+        .political(text)
+        .then(response => {
+          console.log("political", response);
+        })
+        .catch(logError);
+
+      // textapi.sentiment(
+      //   {
+      //     text: "John is a very good football player!"
+      //   },
+      //   (error, response) => {
+      //     if (error === null) {
+      //       console.log(response);
+      //     }
+      //   }
+      // );
+    } else {
+      console.log("No text received");
+    }
+  });
+
+  //on receive image input
+  socket.on("image", image => {
+    if (image) {
+      // console.log("received image", image);
+
+      //emotion
+      indico
+        .fer(image)
+        .then(response => {
+          console.log(response);
+          let anger = response.Anger;
+          let sad = response.Sad;
+          let neutral = response.Neutral;
+          let surprise = response.Surprise;
+          let fear = response.Fear;
+          let happy = response.Happy;
+
+          let emotions = [anger, sad, neutral, surprise, fear, happy];
+          let emotionNames = [
+            "anger",
+            "sad",
+            "neutral",
+            "surprise",
+            "fear",
+            "happy"
+          ];
+
+          let highestEmotionValue = 0;
+          let highestEmotion;
+          for (let i = 0; i < 5; i++) {
+            if (emotions[i] > highestEmotionValue) {
+              highestEmotionValue = emotions[i];
+              highestEmotion = emotionNames[i];
+            }
+          }
+
+          console.log(highestEmotion);
+
+          board.on("ready", function() {
+            //functions according to emotions
+            function type1(ledABC) {
+              var ledA = new five.Led(ledABC[0]);
+              var ledB = new five.Led(ledABC[1]);
+              var ledC = new five.Led(ledABC[2]);
+
+              ledA.strobe(1000);
+
+              setTimeout(() => {
+                ledB.strobe(1000);
+              }, 333);
+
+              setTimeout(() => {
+                ledC.strobe(1000);
+              }, 666);
+            }
+            function type2(ledABC) {
+              var ledA = new five.Led(ledABC[0]);
+              var ledB = new five.Led(ledABC[1]);
+              var ledC = new five.Led(ledABC[2]);
+
+              ledA.strobe(500);
+              ledB.strobe(500);
+              ledC.strobe(500);
+            }
+            if (highestEmotion === "happy") {
+              ledABC = greenLed;
+              type1(ledABC);
+            } else if (highestEmotion === "fear") {
+              ledABC = yellowLed;
+              type1(ledABC);
+            } else if (highestEmotion === "sad") {
+              ledABC = redLed;
+              type1(ledABC);
+            } else if (highestEmotion === "surprise") {
+              ledABC = yellowLed;
+              type2(ledABC);
+            } else if (highestEmotion === "angry") {
+              ledABC = redLed;
+              type2(ledABC);
+            }
+            var motor = new five.Motor(3);
+            motor.start();
+          });
+        })
+        .catch(logError);
+
+      // indico
+      //   .imageRecognition(image)
+      //   .then(response => {
+      //     console.log(response);
+      //   })
+      //   .catch(logError);
+    } else {
+      console.log("no image received");
+    }
+  });
 });
