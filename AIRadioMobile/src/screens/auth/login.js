@@ -1,13 +1,11 @@
 import React from 'react';
 import { StyleSheet, Text, View, TextInput,Dimensions, TouchableHighlight, CameraRoll,Modal,Button,Image,ScrollView } from 'react-native';
 import RNFetchBlob from 'react-native-fetch-blob';
-import SocketIOClient from 'socket.io-client';
-import {appConnection} from '../../util';
+import {appConnection,Context} from '../../util';
 
 const {height,width} = Dimensions.get('window');
 
-
-export default class Login extends React.Component {
+class Login extends React.Component {
     constructor(){
         super();
         this.state={
@@ -15,21 +13,20 @@ export default class Login extends React.Component {
             modalVisible: false,
             images: []
         };
-        this.socket =  SocketIOClient('https://40e1665d.ngrok.io');
-        
+        console.log(this);
     }
     setModalVisible(visible) {
         this.setState({modalVisible: visible});
     }
 
     handlePersonnality(text){
-        appConnection(this.socket).personnality(text);
+        appConnection(this.props.socket).personnality(text);
     }
     handleSendImage(image){
         RNFetchBlob.fs.readFile(image, 'base64')
             .then((data) => {
                 console.log(data);
-                appConnection(this.socket).image(data);
+                appConnection(this.props.socket).image(data);
             });
         this.setState({
             modalVisible: false
@@ -100,11 +97,18 @@ export default class Login extends React.Component {
                     }}>
                     <Text>Show Modal</Text>
                 </TouchableHighlight>
-                <TouchableHighlight
-                    onPress={() => this.props.navigation.navigate('camera',{socket:this.socket})}>
-                    <Text>Show Camera</Text>
-                </TouchableHighlight>
             </View>
+
+        );
+    }
+}
+
+export default class LoginData extends React.Component{
+    render(){
+        return(
+            <Context.Consumer>
+                {value=> <Login socket={value}/>}
+            </Context.Consumer>
         );
     }
 }

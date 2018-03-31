@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/Users/frodinm/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
+        <dex dex="/Users/frodinm/Documents/AIRadio/AIRadioMobile/android/app/build/intermediates/pre-dexed/debug/bolts-tasks-1.4.0_3fc8ef797e2547a83dcec96d940dec83d59424ea.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/frodinm/Documents/AIRadio/AIRadioMobile/android/app/build/intermediates/exploded-aar/AIRadioMobile/react-native-fetch-blob/unspecified/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="16aa65af1f032cccefe5702d65fff0bcaf271be7">
+        <dex dex="/Users/frodinm/Documents/AIRadio/AIRadioMobile/android/app/build/intermediates/pre-dexed/debug/AIRadioMobile-react-native-fetch-blob-unspecified_fab85213c632665186443e1943d28bd7a3e1e23a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/frodinm/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-urlconnection/3.6.0/3f9b16b774f2c36cfd86dd2053d0b3059531dacc/okhttp-urlconnection-3.6.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="3f9b16b774f2c36cfd86dd2053d0b3059531dacc">
+        <dex dex="/Users/frodinm/Documents/AIRadio/AIRadioMobile/android/app/build/intermediates/pre-dexed/debug/okhttp-urlconnection-3.6.0_35675bbb03a437fbfa38bb8defffedef82d9f66d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/frodinm/Documents/AIRadio/AIRadioMobile/android/app/build/intermediates/exploded-aar/com.facebook.fbui.textlayoutbuilder/textlayoutbuilder/1.0.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="f90b593491e4044903f0bbf68dc3fa2790b151b9">
+        <dex dex="/Users/frodinm/Documents/AIRadio/AIRadioMobile/android/app/build/intermediates/pre-dexed/debug/com.facebook.fbui.textlayoutbuilder-textlayoutbuilder-1.0.0_c598884e5b64c9a20890dcf5520458c7e1bd62f3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/frodinm/Documents/AIRadio/AIRadioMobile/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/10.2.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="1ac56e5801e986583cbe27f2cce57f626cc7ff93">
+        <dex dex="/Users/frodinm/Documents/AIRadio/AIRadioMobile/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-basement-10.2.0_3cbcf00b28e896dca6558465fd61d0795441db66.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/frodinm/Documents/AIRadio/AIRadioMobile/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.54.4/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="9236445249b688377917bbf182bb651ba5a9c5f1">
+        <dex dex="/Users/frodinm/Documents/AIRadio/AIRadioMobile/android/app/build/intermediates/pre-dexed/debug/com.facebook.react-react-native-0.54.4_bf9b7a92a1e5b286b1cb36d0d715bb97eeb8a633.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/frodinm/Documents/AIRadio/AIRadioMobile/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-base/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="72128af126ddd7d6252da9357fe560d3abcdfb0c">
+        <dex dex="/Users/frodinm/Documents/AIRadio/AIRadioMobile/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-base-1.3.0_9510ddd59b2f7d8f4c1fb79e80f38ad7c362b011.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/frodinm/Documents/AIRadio/AIRadioMobile/android/app/build/intermediates/exploded-aar/com.facebook.soloader/soloader/0.1.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="8f615bca00639150c9eb6175d4b5471193f70794">
+        <dex dex="/Users/frodinm/Documents/AIRadio/AIRadioMobile/android/app/build/intermediates/pre-dexed/debug/com.facebook.soloader-soloader-0.1.0_a28d83b9a349e1d1595ae60de43505ad0cadb58e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/frodinm/Documents/AIRadio/AIRadioMobile/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/10.2.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="bd75f9f0296fe220da6d0ad961831b04541c4452">
+        <dex dex="/Users/frodinm/Documents/AIRadio/AIRadioMobile/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-tasks-10.2.0_ed31186c1ef02e591ecc0fa007aaa70804e2383e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/frodinm/.gradle/caches/modules-2/files-2.1/com.android.support/support-annotations/27.1.0/39ded76b5e1ce1c5b2688e1d25cdc20ecee32007/support-annotations-27.1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="39ded76b5e1ce1c5b2688e1d25cdc20ecee32007">
+        <dex dex="/Users/frodinm/Documents/AIRadio/AIRadioMobile/android/app/build/intermediates/pre-dexed/debug/support-annotations-27.1.0_840819c18860a9035273799c89988e78eeb26be3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/frodinm/Documents/AIRadio/AIRadioMobile/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="3d13e510077b35fe8e49930a627dd849ad5da0dc">
+        <dex dex="/Users/frodinm/Documents/AIRadio/AIRadioMobile/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-base-10.2.0_13eeecf7ff42842e414ca21d6791573156a8157a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/frodinm/Documents/AIRadio/AIRadioMobile/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/26.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/Users/frodinm/Documents/AIRadio/AIRadioMobile/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-26.0.1_05a5d400a7166c5d1b0cbce92d55d42eb2504408.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/frodinm/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.13.0/a9283170b7305c8d92d25aff02a6ab7e45d06cbe/okio-1.13.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="a9283170b7305c8d92d25aff02a6ab7e45d06cbe">
+        <dex dex="/Users/frodinm/Documents/AIRadio/AIRadioMobile/android/app/build/intermediates/pre-dexed/debug/okio-1.13.0_306928bc18aff42f82f391cd62acd686f3416afc.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/frodinm/Documents/AIRadio/AIRadioMobile/android/app/build/intermediates/exploded-aar/com.android.support/support-fragment/26.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="dff4d8f88fe2c0e57306e6981fd9b90caeead7e3">
+        <dex dex="/Users/frodinm/Documents/AIRadio/AIRadioMobile/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-fragment-26.0.1_b6441dee39cbd099e4ddc95b66ffdf0dc3109700.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/frodinm/.m2/repository/javax/inject/javax.inject/1/javax.inject-1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="6975da39a7040257bd51d21a231b76c915872d38">
+        <dex dex="/Users/frodinm/Documents/AIRadio/AIRadioMobile/android/app/build/intermediates/pre-dexed/debug/javax.inject-1_82b71e02d7e09edda38b3edcededfef49e77d9a3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/frodinm/Documents/AIRadio/AIRadioMobile/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fresco/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="fe85b87215e405f5917d40ae4960488ac9224b74">
+        <dex dex="/Users/frodinm/Documents/AIRadio/AIRadioMobile/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fresco-1.3.0_e3dc5300be3099ee66fa3f49bfb2dc74af86ebf6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/frodinm/Documents/AIRadio/AIRadioMobile/android/app/build/intermediates/exploded-aar/AIRadioMobile/react-native-camera/unspecified/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="36bf1a03f7ded80a7d61992cff92180ae4fcae72">
+        <dex dex="/Users/frodinm/Documents/AIRadio/AIRadioMobile/android/app/build/intermediates/pre-dexed/debug/AIRadioMobile-react-native-camera-unspecified_b9ddae92499a7746f65ed3dcfeba1089e0b9b6ed.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/frodinm/.gradle/caches/modules-2/files-2.1/com.drewnoakes/metadata-extractor/2.9.1/53fdf22be10c9d426ec63431c7342895bc642261/metadata-extractor-2.9.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="53fdf22be10c9d426ec63431c7342895bc642261">
+        <dex dex="/Users/frodinm/Documents/AIRadio/AIRadioMobile/android/app/build/intermediates/pre-dexed/debug/metadata-extractor-2.9.1_8676dc19d836368385211c83cab1e3e9191f7463.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/frodinm/Documents/AIRadio/AIRadioMobile/android/app/build/intermediates/exploded-aar/com.facebook.fresco/drawee/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="c65a2e39d54023bac3aef64a2f0cff89289c7ff6">
+        <dex dex="/Users/frodinm/Documents/AIRadio/AIRadioMobile/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-drawee-1.3.0_3f9025c64ba6ac3bdb3cf314eb9902d355721e03.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/frodinm/Documents/AIRadio/AIRadioMobile/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-vision/10.2.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="444f9de23145e8caba7bf1c1772acad142ea6013">
+        <dex dex="/Users/frodinm/Documents/AIRadio/AIRadioMobile/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-vision-10.2.0_0f62a41b8393aa2c7e9fc96c8ecebeb834629661.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/frodinm/Documents/AIRadio/AIRadioMobile/android/app/build/intermediates/exploded-aar/com.github.react-native-community/cameraview/d529251d24c0a367a28eea28f0eac2269d12f772/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="e64d3bd4020c2600a42923c3b493bbb2e81f1211">
+        <dex dex="/Users/frodinm/Documents/AIRadio/AIRadioMobile/android/app/build/intermediates/pre-dexed/debug/com.github.react-native-community-cameraview-d529251d24c0a367a28eea28f0eac2269d12f772_d73d903ddd052833f4c12f53ae02d60f59fde7dd.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/frodinm/Documents/AIRadio/AIRadioMobile/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="/Users/frodinm/Documents/AIRadio/AIRadioMobile/android/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.0.1_19a289b06c0bcf6e57d50eec6ab4b947f53f2603.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/frodinm/Documents/AIRadio/AIRadioMobile/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-okhttp3/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="c03c08c9934b23c8c09c803345ec51a74119127b">
+        <dex dex="/Users/frodinm/Documents/AIRadio/AIRadioMobile/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-okhttp3-1.3.0_38d552c21844457638261d1f32dc3114374fb980.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/frodinm/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.6.0/69edde9fc4b01c9fd51d25b83428837478c27254/okhttp-3.6.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="69edde9fc4b01c9fd51d25b83428837478c27254">
+        <dex dex="/Users/frodinm/Documents/AIRadio/AIRadioMobile/android/app/build/intermediates/pre-dexed/debug/okhttp-3.6.0_ca24d60f2f763f92d929052da180eb71e400837e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/frodinm/Documents/AIRadio/AIRadioMobile/android/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/26.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="71af915b7f4f7ec0b5f768b365145bb6a5cb9a66">
+        <dex dex="/Users/frodinm/Documents/AIRadio/AIRadioMobile/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-ui-26.0.1_972632800f51a4fe51bcc7da13d11d56f3b7803b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/frodinm/Documents/AIRadio/AIRadioMobile/android/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/26.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="a4590fa7eadce322ca893129fdc999074e1aa5bf">
+        <dex dex="/Users/frodinm/Documents/AIRadio/AIRadioMobile/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-media-compat-26.0.1_c9a6d498e04395964b1cf77f7b8b5855e2bbda55.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/frodinm/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.0/5871fb60dc68d67da54a663c3fd636a10a532948/jsr305-3.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="5871fb60dc68d67da54a663c3fd636a10a532948">
+        <dex dex="/Users/frodinm/Documents/AIRadio/AIRadioMobile/android/app/build/intermediates/pre-dexed/debug/jsr305-3.0.0_5fe2e79fdb605cc545e5671ef1a3cd3f5c621e82.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/frodinm/.gradle/caches/modules-2/files-2.1/com.google.zxing/core/3.2.1/2287494d4f5f9f3a9a2bb6980e3f32053721b315/core-3.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="2287494d4f5f9f3a9a2bb6980e3f32053721b315">
+        <dex dex="/Users/frodinm/Documents/AIRadio/AIRadioMobile/android/app/build/intermediates/pre-dexed/debug/core-3.2.1_3fc441e7f309f7f1119270897152daded663ccc7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/frodinm/.gradle/caches/modules-2/files-2.1/com.facebook.fbui.textlayoutbuilder/staticlayout-proxy/1.0/f162442a19fff13995fbd51ba414d9ee05579080/staticlayout-proxy-1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="f162442a19fff13995fbd51ba414d9ee05579080">
+        <dex dex="/Users/frodinm/Documents/AIRadio/AIRadioMobile/android/app/build/intermediates/pre-dexed/debug/staticlayout-proxy-1.0_f44b9db0d7fb2c2a106119ab2589be897146b420.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/frodinm/Documents/AIRadio/AIRadioMobile/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="48c7f54c2515a2312d3a4481d10c43fbb807f3af">
+        <dex dex="/Users/frodinm/Documents/AIRadio/AIRadioMobile/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-1.3.0_9de3200879a87efb4c72e45f6f072253cb6c89be.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/frodinm/Documents/AIRadio/AIRadioMobile/android/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/26.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d095503f29a8dedc55b9326ed97a5902a1527ab9">
+        <dex dex="/Users/frodinm/Documents/AIRadio/AIRadioMobile/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-utils-26.0.1_4850881a6b6d748f540c141c748b241bec6e1628.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/frodinm/Documents/AIRadio/AIRadioMobile/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fbcore/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="37345de2ed2772f385eaeec37a9c2ff0fea99ad7">
+        <dex dex="/Users/frodinm/Documents/AIRadio/AIRadioMobile/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fbcore-1.3.0_73e9ca423fcef5d65f99cae992981c80a73e06dc.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/frodinm/Documents/AIRadio/AIRadioMobile/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/26.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="22c673e65215e0764add61e3102946de895439e4">
+        <dex dex="/Users/frodinm/Documents/AIRadio/AIRadioMobile/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-compat-26.0.1_fb1e7959456aa0df239cc175bd24ac534e8c83d8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/frodinm/.gradle/caches/modules-2/files-2.1/com.adobe.xmp/xmpcore/5.1.2/55615fa2582424e38705487d1d3969af8554f637/xmpcore-5.1.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="55615fa2582424e38705487d1d3969af8554f637">
+        <dex dex="/Users/frodinm/Documents/AIRadio/AIRadioMobile/android/app/build/intermediates/pre-dexed/debug/xmpcore-5.1.2_689ab4bc9cf1d2e840bc466a81cbe5d5f5f2fa7a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/frodinm/Documents/AIRadio/AIRadioMobile/android/app/build/intermediates/exploded-aar/com.android.support/exifinterface/27.1.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="0d6df4057d1620a785f5bd2e69dd0d7866f3613c">
+        <dex dex="/Users/frodinm/Documents/AIRadio/AIRadioMobile/android/app/build/intermediates/pre-dexed/debug/com.android.support-exifinterface-27.1.0_6cd414d7475515148c705b9e38972e3333a7dbbe.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/frodinm/Documents/AIRadio/AIRadioMobile/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.54.4/jars/libs/infer-annotations-4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="9809e90be788acdb479b2b44e2112f3295a03068">
+        <dex dex="/Users/frodinm/Documents/AIRadio/AIRadioMobile/android/app/build/intermediates/pre-dexed/debug/infer-annotations-4.0_d1501e7cae8e6f400e875391bb68bcacf12364ca.jar" />
+    </item>
+
+</items>
