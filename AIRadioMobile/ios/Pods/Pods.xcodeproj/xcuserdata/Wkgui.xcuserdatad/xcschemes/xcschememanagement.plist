@@ -7,37 +7,47 @@
 		<key>Pods-AIRadioMobile-tvOS.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>3</integer>
+			<integer>42</integer>
 		</dict>
 		<key>Pods-AIRadioMobile-tvOSTests.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>4</integer>
+			<integer>43</integer>
 		</dict>
 		<key>Pods-AIRadioMobile.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>41</integer>
 		</dict>
 		<key>Pods-AIRadioMobileTests.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>5</integer>
+			<integer>44</integer>
+		</dict>
+		<key>RNVectorIcons.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>48</integer>
 		</dict>
 		<key>React.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>6</integer>
+			<integer>45</integer>
 		</dict>
 		<key>react-native-camera.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>7</integer>
+			<integer>46</integer>
+		</dict>
+		<key>react-native-fetch-blob.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>47</integer>
 		</dict>
 		<key>yoga.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>8</integer>
+			<integer>49</integer>
 		</dict>
 	</dict>
 </dict>
