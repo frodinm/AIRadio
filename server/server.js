@@ -10,7 +10,7 @@ var logger = require("morgan");
 var passport = require("passport");
 var LocalStrategy = require("passport-local").Strategy;
 var bcrypt = require("bcrypt");
-
+// var board = new five.Boards(["/dev/cu.usbserial-DA00WSQJ"]);
 //AylienText
 // var AYLIENTextAPI = require("aylien_textapi");
 // var textapi = new AYLIENTextAPI({
@@ -18,9 +18,9 @@ var bcrypt = require("bcrypt");
 //   application_key: "e2b8dbac16bd83dcae95662206c50a15"
 // });
 
-// johnny - five;
-// var five = require("johnny-five"),
-//   board = new five.Board();
+//johnny - five;
+var five = require("johnny-five"),
+  board = new five.Board("/dev/cu.usbserial-DA00WSQJ");
 
 var app = express();
 app.use(cors());
@@ -129,94 +129,117 @@ server.listen(process.env.PORT || 5000, () => {
   );
 });
 
-websocket.on("connection", socket => {
-  console.log("a user connected");
-
-  socket.emit("connection", "hello");
-
-  socket.on("disconnect", function() {
-    console.log("user disconnected");
+board.on("ready", function() {
+  let allLed = [7, 10, 13, 6, 9, 12, 5, 8, 11];
+  let ledArray = [];
+  allLed.forEach(led => {
+    ledArray.push(new five.Led(led));
   });
 
-  //on receive text input
-  socket.on("text", text => {
-    console.log(text);
-    // text =
-    //   'Why would Kim Jong-un insult me by calling me "old," when I would NEVER call him "short and fat?" Oh well, I try so hard to be his friend - and maybe someday that will happen!';
-    if (text) {
-      console.log("received text:", text);
+  let redLed = [0, 1, 2];
+  let yellowLed = [3, 4, 5];
+  let greenLed = [6, 7, 8];
 
-      //personality
-      indico
-        .personality(text)
-        .then(response => {
-          console.log("personality", response);
-        })
-        .catch(logError);
+  function type1(ledABC) {
+    new Promise(resolve => {
+      ledArray.forEach(led => {
+        led.stop().off();
+      });
+      resolve();
+    }).then(() => {
+      var ledA = ledArray[ledABC[0]];
+      var ledB = ledArray[ledABC[1]];
+      var ledC = ledArray[ledABC[2]];
 
-      //personas
-      indico
-        .personas(text)
-        .then(response => {
-          console.log("personas", response);
-        })
-        .catch(logError);
+      ledA.blink(1000);
 
-      //emotion
-      indico
-        .emotion(text)
-        .then(response => {
-          console.log("emotion", response);
-          let anger = response.anger;
-          let joy = response.joy;
-          let fear = response.fear;
-          let sadness = response.sadness;
-          let surprise = response.surprise;
+      setTimeout(() => {
+        ledB.blink(1000);
+      }, 333);
 
-          let emotions = [anger, joy, fear, sadness, surprise];
-          let emotionNames = ["anger", "joy", "fear", "sadness", "surprise"];
+      setTimeout(() => {
+        ledC.blink(1000);
+      }, 666);
+    });
+  }
+  function type2(ledABC) {
+    new Promise(resolve => {
+      ledArray.forEach(led => {
+        led.stop().off();
+      });
+      resolve();
+    }).then(() => {
+      var ledA = ledArray[ledABC[0]];
+      var ledB = ledArray[ledABC[1]];
+      var ledC = ledArray[ledABC[2]];
 
-          let highestEmotionValue = 0;
-          let highestEmotion;
-          for (let i = 0; i < 5; i++) {
-            if (emotions[i] > highestEmotionValue) {
-              highestEmotionValue = emotions[i];
-              highestEmotion = emotionNames[i];
+      ledA.blink(500);
+      ledB.blink(500);
+      ledC.blink(500);
+    });
+  }
+
+  websocket.on("connection", socket => {
+    console.log("a user connected");
+
+    socket.emit("connection", "hello");
+
+    socket.on("disconnect", function() {
+      console.log("user disconnected");
+    });
+
+    //on receive text input
+    socket.on("text", text => {
+      console.log(text);
+      // text =
+      //   'Why would Kim Jong-un insult me by calling me "old," when I would NEVER call him "short and fat?" Oh well, I try so hard to be his friend - and maybe someday that will happen!';
+      if (text) {
+        console.log("received text:", text);
+
+        //personality
+        indico
+          .personality(text)
+          .then(response => {
+            console.log("personality", response);
+          })
+          .catch(logError);
+
+        //personas
+        indico
+          .personas(text)
+          .then(response => {
+            console.log("personas", response);
+          })
+          .catch(logError);
+
+        //emotion
+        indico
+          .emotion(text)
+          .then(response => {
+            console.log("emotion", response);
+            let anger = response.anger;
+            let joy = response.joy;
+            let fear = response.fear;
+            let sadness = response.sadness;
+            let surprise = response.surprise;
+
+            let emotions = [anger, joy, fear, sadness, surprise];
+            let emotionNames = ["anger", "joy", "fear", "sadness", "surprise"];
+
+            let highestEmotionValue = 0;
+            let highestEmotion;
+            for (let i = 0; i < 5; i++) {
+              if (emotions[i] > highestEmotionValue) {
+                highestEmotionValue = emotions[i];
+                highestEmotion = emotionNames[i];
+              }
             }
-          }
 
-          console.log(highestEmotion);
+            console.log(highestEmotion);
 
-          let redLed = [7, 10, 13];
-          let yellowLed = [6, 9, 12];
-          let greenLed = [5, 8, 11];
-
-          board.on("ready", function() {
+            console.log("board ready");
             //functions according to emotions
-            function type1(ledABC) {
-              var ledA = new five.Led(ledABC[0]);
-              var ledB = new five.Led(ledABC[1]);
-              var ledC = new five.Led(ledABC[2]);
 
-              ledA.strobe(1000);
-
-              setTimeout(() => {
-                ledB.strobe(1000);
-              }, 333);
-
-              setTimeout(() => {
-                ledC.strobe(1000);
-              }, 666);
-            }
-            function type2(ledABC) {
-              var ledA = new five.Led(ledABC[0]);
-              var ledB = new five.Led(ledABC[1]);
-              var ledC = new five.Led(ledABC[2]);
-
-              ledA.strobe(500);
-              ledB.strobe(500);
-              ledC.strobe(500);
-            }
             if (highestEmotion === "joy") {
               ledABC = greenLed;
               type1(ledABC);
@@ -235,97 +258,72 @@ websocket.on("connection", socket => {
             }
             var motor = new five.Motor(3);
             motor.start();
-          });
-        })
-        .catch(logError);
+          })
+          .catch(logError);
 
-      //political
-      indico
-        .political(text)
-        .then(response => {
-          console.log("political", response);
-        })
-        .catch(logError);
+        //political
+        indico
+          .political(text)
+          .then(response => {
+            console.log("political", response);
+          })
+          .catch(logError);
 
-      // textapi.sentiment(
-      //   {
-      //     text: "John is a very good football player!"
-      //   },
-      //   (error, response) => {
-      //     if (error === null) {
-      //       console.log(response);
-      //     }
-      //   }
-      // );
-    } else {
-      console.log("No text received");
-    }
-  });
+        // textapi.sentiment(
+        //   {
+        //     text: "John is a very good football player!"
+        //   },
+        //   (error, response) => {
+        //     if (error === null) {
+        //       console.log(response);
+        //     }
+        //   }
+        // );
+      } else {
+        console.log("No text received");
+      }
+    });
 
-  //on receive image input
-  socket.on("image", image => {
-    if (image) {
-      // console.log("received image", image);
+    //on receive image input
+    socket.on("image", image => {
+      if (image) {
+        // console.log("received image", image);
 
-      //emotion
-      indico
-        .fer(image)
-        .then(response => {
-          console.log(response);
-          let anger = response.Anger;
-          let sad = response.Sad;
-          let neutral = response.Neutral;
-          let surprise = response.Surprise;
-          let fear = response.Fear;
-          let happy = response.Happy;
+        //emotion
+        indico
+          .fer(image)
+          .then(response => {
+            console.log(response);
+            let anger = response.Anger;
+            let sad = response.Sad;
+            let neutral = response.Neutral;
+            let surprise = response.Surprise;
+            let fear = response.Fear;
+            let happy = response.Happy;
 
-          let emotions = [anger, sad, neutral, surprise, fear, happy];
-          let emotionNames = [
-            "anger",
-            "sad",
-            "neutral",
-            "surprise",
-            "fear",
-            "happy"
-          ];
+            let emotions = [anger, sad, neutral, surprise, fear, happy];
+            let emotionNames = [
+              "anger",
+              "sad",
+              "neutral",
+              "surprise",
+              "fear",
+              "happy"
+            ];
 
-          let highestEmotionValue = 0;
-          let highestEmotion;
-          for (let i = 0; i < 5; i++) {
-            if (emotions[i] > highestEmotionValue) {
-              highestEmotionValue = emotions[i];
-              highestEmotion = emotionNames[i];
+            let highestEmotionValue = 0;
+            let highestEmotion;
+            for (let i = 0; i < 6; i++) {
+              if (emotions[i] > highestEmotionValue) {
+                highestEmotionValue = emotions[i];
+                highestEmotion = emotionNames[i];
+              }
             }
-          }
 
-          console.log(highestEmotion);
+            console.log(highestEmotion);
 
-          board.on("ready", function() {
             //functions according to emotions
-            function type1(ledABC) {
-              var ledA = new five.Led(ledABC[0]);
-              var ledB = new five.Led(ledABC[1]);
-              var ledC = new five.Led(ledABC[2]);
 
-              ledA.strobe(1000);
-
-              setTimeout(() => {
-                ledB.strobe(1000);
-              }, 333);
-
-              setTimeout(() => {
-                ledC.strobe(1000);
-              }, 666);
-            }
-            function type2(ledABC) {
-              var ledA = new five.Led(ledABC[0]);
-              var ledB = new five.Led(ledABC[1]);
-              var ledC = new five.Led(ledABC[2]);
-
-              ledA.strobe(500);
-              ledB.strobe(500);
-              ledC.strobe(500);
-            }
             if (highestEmotion === "happy") {
               ledABC = greenLed;
               type1(ledABC);
@@ -344,18 +342,18 @@ websocket.on("connection", socket => {
             }
             var motor = new five.Motor(3);
             motor.start();
-          });
-        })
-        .catch(logError);
+          })
+          .catch(logError);
 
-      // indico
-      //   .imageRecognition(image)
-      //   .then(response => {
-      //     console.log(response);
-      //   })
-      //   .catch(logError);
-    } else {
-      console.log("no image received");
-    }
+        // indico
+        //   .imageRecognition(image)
+        //   .then(response => {
+        //     console.log(response);
+        //   })
+        //   .catch(logError);
+      } else {
+        console.log("no image received");
+      }
+    });
   });
 });
