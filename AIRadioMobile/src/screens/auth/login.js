@@ -24,10 +24,35 @@ class Login extends React.Component {
         this.state = {
             text: '',
             modalVisible: false,
-            images: []
+            images: [],
+            emotions: [{x: 'anger', y: 0.2},{x: 'joy', y: 0.2},{x: 'suprise', y: 0.2},{x: 'sadness', y: 0.2},{x: 'fear', y: 0.2}],
+            highestEmotions: ''
         };
         console.log(this);
+        
     }
+    componentDidMount(){
+        this.props.socket.on('highestEmotion',(emotion)=>{
+            this.setState({
+                highestEmotions: emotion
+            });
+        });
+        this.props.socket.on('emotions',(emotions)=>{
+            let tempArray = [];
+            let tempobject;
+            for(let emotion in emotions){
+                tempobject = { x: emotion , y: emotions[emotion]};
+                tempArray.push(tempobject);
+            }
+            this.setState({
+                emotions: tempArray
+            });
+            
+            
+        });
+    }
+
+
     setModalVisible(visible) {
         this.setState({modalVisible: visible});
     }
@@ -52,18 +77,14 @@ class Login extends React.Component {
                 <View style={styles.chartContainter}>
                     <Text style={{fontSize:30}}>Emotions chart</Text>
                     <VictoryPie
-                        colorScale={['tomato', 'orange', 'gold', 'cyan', 'navy' ]}
-                        data={[
-                            { x: 'Cats', y: 35 },
-                            { x: 'Dogs', y: 40 },
-                            { x: 'Birds', y: 55 }
-                        ]}
+                        colorScale={['tomato', 'orange', 'gold', 'cyan', 'green','pink' ]}
+                        data={this.state.emotions}
                         animate={{
                             duration: 2000
                         }}
-                        width={width/1.2}
+                        width={width/1.05}
                         height={height/2}
-                        labelRadius={120}
+                        labelRadius={115}
                         style={{ labels: { fill: 'black', fontSize: 18 } }}
                     />
                 </View>
@@ -73,7 +94,7 @@ class Login extends React.Component {
                     style={styles.textInput}
                     onChangeText={text => this.setState({text})}/>
                 
-                <TouchableHighlight onPress={() => this.handlePersonnality(this.state.text)}>
+                <TouchableHighlight style={styles.submitButton} onPress={() => this.handlePersonnality(this.state.text)}>
                     <View style={styles.submitButton}>
                         <Text style={{color:'white',fontSize:20}}>Submit</Text>
                     </View>

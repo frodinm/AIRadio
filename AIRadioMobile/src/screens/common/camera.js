@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, TextInput,Dimensions, TouchableHighlight, CameraRoll,Modal,Button,Image,ScrollView,TouchableOpacity,StatusBar } from 'react-native';
+import { StyleSheet, Text, View, TextInput,Dimensions, TouchableHighlight, CameraRoll,Modal,Button,Image,ScrollView,TouchableOpacity,StatusBar,Platform } from 'react-native';
 import RNFetchBlob from 'react-native-fetch-blob';
 import IOSicon from 'react-native-vector-icons/dist/Ionicons';
 import MaterialIcon from 'react-native-vector-icons/dist/MaterialIcons';
@@ -58,10 +58,19 @@ class Camera extends React.Component {
     switchCamera(){
         let type;
         let {front,back} = RNCamera.Constants.Type;
-        if(this.state.camera.type === 0){
-            type = front;
+        
+        if(Platform.OS === 'android'){
+            if(this.state.camera.type === 0){
+                type = front;
+            }else{
+                type = back;
+            }
         }else{
-            type = back;
+            if(this.state.camera.type === 1){
+                type = front;
+            }else{
+                type = back;
+            } 
         }
 
         this.setState({
@@ -83,6 +92,7 @@ class Camera extends React.Component {
                     ref={(cam) => {
                         this.camera = cam;
                     }}
+                    autoFocus="on"
                     style={styles.preview}
                     type={this.state.camera.type}
                     torchMode={this.state.camera.torchMode}
