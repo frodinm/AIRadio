@@ -6,7 +6,18 @@ target 'AIRadioMobile' do
   # use_frameworks!
 
   # Pods for AIRadioMobile
+  pod 'yoga', :path => '../node_modules/react-native/ReactCommon/yoga'
+  pod 'React', :path => '../node_modules/react-native', :subspecs => [
+  'Core',
+  'DevSupport',
+  'tvOS',
+  'RCTNetwork',
+  'RCTWebSocket',
+  # Add any other subspecs you want to use in your project
+]
 
+
+  pod 'react-native-camera', :path => '../node_modules/react-native-camera'
 
   target 'AIRadioMobileTests' do
     inherit! :search_paths
@@ -27,3 +38,5 @@ target 'AIRadioMobile-tvOS' do
   end
 
 end
+
+
