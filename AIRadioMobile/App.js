@@ -8,7 +8,7 @@ class Provider extends React.Component {
     constructor(){
         super();
         this.state={
-            socket :  SocketIOClient('https://867766a1.ngrok.io')
+            socket :  SocketIOClient('https://49fbae3a.ngrok.io')
         };
     }
     render(){
