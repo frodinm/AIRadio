@@ -1,2 +1,5 @@
 /server/node_modules
 /server/.env
+/server/yarn-error.log
+/yarn-error.log
+/server/.DS_Store

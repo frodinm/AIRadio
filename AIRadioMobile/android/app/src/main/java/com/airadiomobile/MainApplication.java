@@ -3,7 +3,11 @@ package com.airadiomobile;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+<<<<<<< HEAD
 import com.horcrux.svg.SvgPackage;
+=======
+import com.oblador.vectoricons.VectorIconsPackage;
+>>>>>>> 6bae76ea7940b9f01f56ef8c13e84d4a0279d3fe
 import org.reactnative.camera.RNCameraPackage;
 import com.RNFetchBlob.RNFetchBlobPackage;
 import com.facebook.react.ReactNativeHost;
@@ -26,7 +30,11 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+<<<<<<< HEAD
             new SvgPackage(),
+=======
+            new VectorIconsPackage(),
+>>>>>>> 6bae76ea7940b9f01f56ef8c13e84d4a0279d3fe
             new RNCameraPackage(),
             new RNFetchBlobPackage()
       );

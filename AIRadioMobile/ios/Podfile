@@ -20,6 +20,9 @@ target 'AIRadioMobile' do
   pod 'react-native-camera', :path => '../node_modules/react-native-camera'
 
   pod 'RNSVG', :path => '../node_modules/react-native-svg'
+  pod 'react-native-fetch-blob', :path => '../node_modules/react-native-fetch-blob'
+
+  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
 
   target 'AIRadioMobileTests' do
     inherit! :search_paths

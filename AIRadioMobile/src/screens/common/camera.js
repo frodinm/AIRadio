@@ -1,81 +1,172 @@
 import React from 'react';
-import { StyleSheet, Text, View, TextInput,Dimensions, TouchableHighlight, CameraRoll,Modal,Button,Image,ScrollView,TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, TextInput,Dimensions, TouchableHighlight, CameraRoll,Modal,Button,Image,ScrollView,TouchableOpacity,StatusBar } from 'react-native';
 import RNFetchBlob from 'react-native-fetch-blob';
+import IOSicon from 'react-native-vector-icons/dist/Ionicons';
+import MaterialIcon from 'react-native-vector-icons/dist/MaterialIcons';
+import FontIcon from 'react-native-vector-icons/FontAwesome';
+import flashon from '../../assets/camera/ic_flash_on_white.png';
+import flashoff from '../../assets/camera/ic_flash_off_white.png';
 import { RNCamera } from 'react-native-camera';
-import {appConnection} from '../../util';
+import {appConnection,Context} from '../../util';
 
 
 const {height,width} = Dimensions.get('window');
 
 
-export default class Camera extends React.Component {
+class Camera extends React.Component {
     constructor(){
         super();
-        this.state={
-            
+        this.state = {
+            camera: {
+
+                type: RNCamera.Constants.Type.front,
+                
+                torchMode: RNCamera.Constants.FlashMode.torch,
+            }
         };
+        this.switchTorch = this.switchTorch.bind(this);
+    }
+
+    flashIcon() {
+        let icon;
+        const {on,off} = RNCamera.Constants.FlashMode;
+        if (this.state.camera.torchMode === on) {
+            icon = flashon;
+        } else if (this.state.camera.torchMode === off) {
+            icon = flashoff;
+        }
+
+        return icon;
+    }
+
+    switchTorch() {
+        let newTorchMode;
+        const {on, off} = RNCamera.Constants.FlashMode;
+
+        if (this.state.camera.torchMode === on) {
+            newTorchMode = off;
+        } else if (this.state.camera.torchMode === off) {
+            newTorchMode = on;
+        }
+        this.setState({
+            camera: {
+                ...this.state.camera,
+                torchMode: newTorchMode
+            }
+        });
+    }
+    switchCamera(){
+        let type;
+        let {front,back} = RNCamera.Constants.Type;
+        if(this.state.camera.type === 0){
+            type = front;
+        }else{
+            type = back;
+        }
+
+        this.setState({
+            camera:{
+                type
+            }
+        });
+        
     }
     
     render() {
         return (
             <View style={styles.container}>
+                <StatusBar
+                    animated
+                    hidden/>
+
                 <RNCamera
-                    ref={ref => {
-                        this.camera = ref;
+                    ref={(cam) => {
+                        this.camera = cam;
                     }}
-                    type={RNCamera.Constants.Type.back}
-                    flashMode={RNCamera.Constants.FlashMode.off}
+                    style={styles.preview}
+                    type={this.state.camera.type}
+                    torchMode={this.state.camera.torchMode}
                     permissionDialogTitle={'Permission to use camera'}
                     permissionDialogMessage={'We need your permission to use your camera phone'}
-
-                />
-                <View style={{flex: 0, flexDirection: 'row', justifyContent: 'center',}}>
-                    <TouchableOpacity
-                        onPress={this.takePicture.bind(this)}
-                        style = {styles.capture}
-                    >
-                        <Text style={{fontSize: 14}}> SNAP </Text>
-                    </TouchableOpacity>
-                </View>
+                >
+                    <View >
+                        <TouchableOpacity style={styles.flashButton} onPress={() => this.switchCamera()}>
+                            <MaterialIcon name="switch-camera" color="white" size={35}/>
+                        </TouchableOpacity>
+                    </View>
+                    <View style={styles.closeButton}>
+                        <TouchableOpacity onPress={()=>{this.props.navigation.goBack();}}>
+                            <IOSicon name="ios-close" color="white" size={35}/>
+                        </TouchableOpacity>
+                    </View>
+                    <View style={styles.snap}>
+                        <TouchableOpacity onPress={()=>this.takePicture()}>
+                            <FontIcon name="camera-retro" color="white" size={35}/>
+                        </TouchableOpacity>
+                    </View>
+                </RNCamera>
             </View>
         );
     }
     takePicture = async function() {
         if (this.camera) {
-            const options = { quality: 0.5, base64: true };
+            const options = {  quality: 0.5, base64: true };
             const data = await this.camera.takePictureAsync(options);
+            console.log(data);
         
-            CameraRoll.saveToCameraRoll(data.uri.toString(),'photo');
-            RNFetchBlob.fs.readFile(data.uri, 'base64')
-                .then((data) => {
-                    console.log(this.props.navigation.state.socket);
-                    console.log(data);
-                    appConnection(this.props.navigation.state.socket).image(data);
-                });
-            alert(data.uri);
+            CameraRoll.saveToCameraRoll(data.uri,'photo');
+           
+            appConnection(this.props.socket).image(data.base64);
+            this.props.navigation.navigate('app');
         }
     };
+}
+
+export default class CameraData extends React.Component{
+    render(){
+        const {props} = this;
+        return(
+            <Context.Consumer>
+                {value=> <Camera {...props} socket={value}/>}
+            </Context.Consumer>
+        );
+    }
 }
 
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        flexDirection: 'column',
-        backgroundColor: 'black'
     },
     preview: {
         flex: 1,
-        justifyContent: 'flex-end',
-        alignItems: 'center'
-    },
-    capture: {
-        flex: 0,
-        backgroundColor: '#fff',
-        borderRadius: 5,
-        padding: 15,
-        paddingHorizontal: 20,
-        alignSelf: 'center',
-        margin: 20
-    }
-});
 
+    },
+    flashButton: {
+        margin: 30,
+        height:40,
+        width:40,
+        alignItems:'center',
+        justifyContent:'center'
+        
+    },
+    closeButton:{
+        position:'absolute',
+        top:30,
+        right:30,
+        height:40,
+        width:40,
+        backgroundColor:'transparent',
+        alignItems:'center',
+        justifyContent:'center'
+    },
+    snap:{
+        position:'absolute',
+        bottom:30,
+        height:40,
+        width,
+        backgroundColor:'transparent',
+        alignItems:'center',
+        justifyContent:'center'
+    }
+
+});
