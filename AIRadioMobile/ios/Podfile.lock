@@ -1,3 +1,54 @@
-PODFILE CHECKSUM: 58cb21e4c4c444431842031889a1bed3d7113b9d
+PODS:
+  - React (0.54.4):
+    - React/Core (= 0.54.4)
+  - react-native-camera (1.0.3):
+    - React
+    - react-native-camera/RCT (= 1.0.3)
+    - react-native-camera/RN (= 1.0.3)
+  - react-native-camera/RCT (1.0.3):
+    - React
+  - react-native-camera/RN (1.0.3):
+    - React
+  - React/Core (0.54.4):
+    - yoga (= 0.54.4.React)
+  - React/DevSupport (0.54.4):
+    - React/Core
+    - React/RCTWebSocket
+  - React/fishhook (0.54.4)
+  - React/RCTBlob (0.54.4):
+    - React/Core
+  - React/RCTNetwork (0.54.4):
+    - React/Core
+  - React/RCTWebSocket (0.54.4):
+    - React/Core
+    - React/fishhook
+    - React/RCTBlob
+  - React/tvOS (0.54.4):
+    - React/Core
+  - yoga (0.54.4.React)
+
+DEPENDENCIES:
+  - react-native-camera (from `../node_modules/react-native-camera`)
+  - React/Core (from `../node_modules/react-native`)
+  - React/DevSupport (from `../node_modules/react-native`)
+  - React/RCTNetwork (from `../node_modules/react-native`)
+  - React/RCTWebSocket (from `../node_modules/react-native`)
+  - React/tvOS (from `../node_modules/react-native`)
+  - yoga (from `../node_modules/react-native/ReactCommon/yoga`)
+
+EXTERNAL SOURCES:
+  React:
+    :path: ../node_modules/react-native
+  react-native-camera:
+    :path: ../node_modules/react-native-camera
+  yoga:
+    :path: ../node_modules/react-native/ReactCommon/yoga
+
+SPEC CHECKSUMS:
+  React: c237e42de9c70e5cac6eeb52b4cfd3a0910c1f00
+  react-native-camera: ab22041dcf0403d88f2ae4b9ea3ed2644e680423
+  yoga: 55da126afc384965b96bff46652464373b330add
+
+PODFILE CHECKSUM: b0bed32fcb7facef18b6d8f679483d2dd156afa7
 
 COCOAPODS: 1.4.0

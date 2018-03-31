@@ -13,7 +13,9 @@
 		00C302E91ABCBA2D00DB3ED1 /* libRCTNetwork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302DC1ABCB9D200DB3ED1 /* libRCTNetwork.a */; };
 		00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302E41ABCB9EE00DB3ED1 /* libRCTVibration.a */; };
 		00E356F31AD99517003FC87E /* AIRadioMobileTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* AIRadioMobileTests.m */; };
-		04B8B62AB99F748DF3C00DD6 /* libPods-AIRadioMobile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D1FE08658A9D967698DBDF5C /* libPods-AIRadioMobile.a */; };
+		079A99EF206EE4FA009B4E7D /* libRCTCameraRoll.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 079A99EE206EE4EB009B4E7D /* libRCTCameraRoll.a */; };
+		079A99F6206EF102009B4E7D /* libRNFetchBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 079A99F5206EF0FA009B4E7D /* libRNFetchBlob.a */; };
+		079A9A9E206EFFF5009B4E7D /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C398B91ACF4ADC00677621 /* libRCTLinking.a */; };
 		139105C61AF99C1200B5F7CC /* libRCTSettings.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139105C11AF99BAD00B5F7CC /* libRCTSettings.a */; };
 		139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139FDEF41B06529B00C62182 /* libRCTWebSocket.a */; };
@@ -22,8 +24,6 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
-		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
-		1754DCCB79F447FE4065B135 /* libPods-AIRadioMobileTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 01592610F2DE1AE04FA4CEDE /* libPods-AIRadioMobileTests.a */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
@@ -36,11 +36,13 @@
 		2D02E4C81E0B4AEC006451C7 /* libRCTWebSocket-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3E991DF850E9000B6D8A /* libRCTWebSocket-tvOS.a */; };
 		2D16E6881FA4F8E400B85C8A /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D16E6891FA4F8E400B85C8A /* libReact.a */; };
 		2DCD954D1E0B4F2C00145EB5 /* AIRadioMobileTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* AIRadioMobileTests.m */; };
-		4C739C0665AC42A0C91DB05D /* libPods-AIRadioMobile-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F8D9F6B322435E43DD02381F /* libPods-AIRadioMobile-tvOS.a */; };
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
+		6E4C1B9A197E1EA963E9A52F /* libPods-AIRadioMobile-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B90115C79DAD34873A762BB /* libPods-AIRadioMobile-tvOS.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
-		E9C7E83F4A6D057322D46FCE /* libPods-AIRadioMobile-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 046F517AD2183416983E4920 /* libPods-AIRadioMobile-tvOSTests.a */; };
+		BA7801F39B53991339645724 /* libPods-AIRadioMobile-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F084D8351FF6C96934586A0 /* libPods-AIRadioMobile-tvOSTests.a */; };
+		C366E90D107F018FF2C12C4C /* libPods-AIRadioMobile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F251D13F762814096848F446 /* libPods-AIRadioMobile.a */; };
+		F65E802DA0F72B9006DBD8BB /* libPods-AIRadioMobileTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB95E5078952E13C79B107A /* libPods-AIRadioMobileTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -141,6 +143,20 @@
 			proxyType = 2;
 			remoteGlobalIDString = 9936F32F1F5F2E5B0010BF04;
 			remoteInfo = "privatedata-tvOS";
+		};
+		079A99ED206EE4EB009B4E7D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 079A99E9206EE4EB009B4E7D /* RCTCameraRoll.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 58B5115D1A9E6B3D00147676;
+			remoteInfo = RCTCameraRoll;
+		};
+		079A99F4206EF0FA009B4E7D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 079A99F0206EF0FA009B4E7D /* RNFetchBlob.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A15C300E1CD25C330074CB35;
+			remoteInfo = RNFetchBlob;
 		};
 		139105C01AF99BAD00B5F7CC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -329,8 +345,11 @@
 		00E356EE1AD99517003FC87E /* AIRadioMobileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AIRadioMobileTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* AIRadioMobileTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AIRadioMobileTests.m; sourceTree = "<group>"; };
-		01592610F2DE1AE04FA4CEDE /* libPods-AIRadioMobileTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AIRadioMobileTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		046F517AD2183416983E4920 /* libPods-AIRadioMobile-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AIRadioMobile-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		077BD43A2E0ED1CA34626C74 /* Pods-AIRadioMobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AIRadioMobile.release.xcconfig"; path = "Pods/Target Support Files/Pods-AIRadioMobile/Pods-AIRadioMobile.release.xcconfig"; sourceTree = "<group>"; };
+		079A99E9206EE4EB009B4E7D /* RCTCameraRoll.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTCameraRoll.xcodeproj; path = "../node_modules/react-native/Libraries/CameraRoll/RCTCameraRoll.xcodeproj"; sourceTree = "<group>"; };
+		079A99F0206EF0FA009B4E7D /* RNFetchBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNFetchBlob.xcodeproj; path = "../node_modules/react-native-fetch-blob/ios/RNFetchBlob.xcodeproj"; sourceTree = "<group>"; };
+		079A9A9D206EFFEA009B4E7D /* libReact.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReact.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F084D8351FF6C96934586A0 /* libPods-AIRadioMobile-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AIRadioMobile-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTSettings.xcodeproj; path = "../node_modules/react-native/Libraries/Settings/RCTSettings.xcodeproj"; sourceTree = "<group>"; };
 		139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTWebSocket.xcodeproj; path = "../node_modules/react-native/Libraries/WebSocket/RCTWebSocket.xcodeproj"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* AIRadioMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AIRadioMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -341,23 +360,23 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = AIRadioMobile/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = AIRadioMobile/main.m; sourceTree = "<group>"; };
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
-		29211E3131E84ACE5A3DBEAE /* Pods-AIRadioMobile-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AIRadioMobile-tvOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AIRadioMobile-tvOSTests/Pods-AIRadioMobile-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		1F524BAF08EABB5DA743677D /* Pods-AIRadioMobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AIRadioMobile.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AIRadioMobile/Pods-AIRadioMobile.debug.xcconfig"; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* AIRadioMobile-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AIRadioMobile-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* AIRadioMobile-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AIRadioMobile-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D16E6891FA4F8E400B85C8A /* libReact.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReact.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		3A39E127E62F51C823E01AC6 /* Pods-AIRadioMobileTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AIRadioMobileTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AIRadioMobileTests/Pods-AIRadioMobileTests.release.xcconfig"; sourceTree = "<group>"; };
+		3CB946D9E95CB09F5DDC1CEC /* Pods-AIRadioMobile-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AIRadioMobile-tvOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AIRadioMobile-tvOSTests/Pods-AIRadioMobile-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		5B90115C79DAD34873A762BB /* libPods-AIRadioMobile-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AIRadioMobile-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
-		621B3720390D860D4AA81584 /* Pods-AIRadioMobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AIRadioMobile.release.xcconfig"; path = "Pods/Target Support Files/Pods-AIRadioMobile/Pods-AIRadioMobile.release.xcconfig"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
-		7ADBC97524B707DEE9ECDDF9 /* Pods-AIRadioMobileTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AIRadioMobileTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AIRadioMobileTests/Pods-AIRadioMobileTests.debug.xcconfig"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
+		964E0717DCD30A389A581DD9 /* Pods-AIRadioMobile-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AIRadioMobile-tvOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AIRadioMobile-tvOSTests/Pods-AIRadioMobile-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9BC162B933D3683A86D022CB /* Pods-AIRadioMobile-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AIRadioMobile-tvOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AIRadioMobile-tvOS/Pods-AIRadioMobile-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		AC81BC3FDAD3EF588C784D19 /* Pods-AIRadioMobileTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AIRadioMobileTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AIRadioMobileTests/Pods-AIRadioMobileTests.release.xcconfig"; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
-		B22401D051125BA91CDFDC89 /* Pods-AIRadioMobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AIRadioMobile.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AIRadioMobile/Pods-AIRadioMobile.debug.xcconfig"; sourceTree = "<group>"; };
-		D1FE08658A9D967698DBDF5C /* libPods-AIRadioMobile.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AIRadioMobile.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DF7B7E823E69EC91C7EF83E8 /* Pods-AIRadioMobile-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AIRadioMobile-tvOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AIRadioMobile-tvOS/Pods-AIRadioMobile-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
-		ECB3C1C44BDB5F77C1E019CF /* Pods-AIRadioMobile-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AIRadioMobile-tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-AIRadioMobile-tvOS/Pods-AIRadioMobile-tvOS.release.xcconfig"; sourceTree = "<group>"; };
-		F8D9F6B322435E43DD02381F /* libPods-AIRadioMobile-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AIRadioMobile-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FE243E08FC67648B28E354BF /* Pods-AIRadioMobile-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AIRadioMobile-tvOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AIRadioMobile-tvOSTests/Pods-AIRadioMobile-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		CBB95E5078952E13C79B107A /* libPods-AIRadioMobileTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AIRadioMobileTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F19E451D22514D3F92D56C87 /* Pods-AIRadioMobileTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AIRadioMobileTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AIRadioMobileTests/Pods-AIRadioMobileTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F251D13F762814096848F446 /* libPods-AIRadioMobile.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AIRadioMobile.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F62FDA24ED186EA88271FB4F /* Pods-AIRadioMobile-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AIRadioMobile-tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-AIRadioMobile-tvOS/Pods-AIRadioMobile-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -366,7 +385,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */,
-				1754DCCB79F447FE4065B135 /* libPods-AIRadioMobileTests.a in Frameworks */,
+				F65E802DA0F72B9006DBD8BB /* libPods-AIRadioMobileTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,9 +393,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				079A9A9E206EFFF5009B4E7D /* libReact.a in Frameworks */,
+				079A99F6206EF102009B4E7D /* libRNFetchBlob.a in Frameworks */,
+				079A99EF206EE4FA009B4E7D /* libRCTCameraRoll.a in Frameworks */,
 				ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */,
 				5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */,
-				146834051AC3E58100842450 /* libReact.a in Frameworks */,
 				5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */,
 				00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */,
 				00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */,
@@ -387,7 +408,7 @@
 				832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */,
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
-				04B8B62AB99F748DF3C00DD6 /* libPods-AIRadioMobile.a in Frameworks */,
+				C366E90D107F018FF2C12C4C /* libPods-AIRadioMobile.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,7 +424,7 @@
 				2D02E4C61E0B4AEC006451C7 /* libRCTSettings-tvOS.a in Frameworks */,
 				2D02E4C71E0B4AEC006451C7 /* libRCTText-tvOS.a in Frameworks */,
 				2D02E4C81E0B4AEC006451C7 /* libRCTWebSocket-tvOS.a in Frameworks */,
-				4C739C0665AC42A0C91DB05D /* libPods-AIRadioMobile-tvOS.a in Frameworks */,
+				6E4C1B9A197E1EA963E9A52F /* libPods-AIRadioMobile-tvOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,28 +432,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9C7E83F4A6D057322D46FCE /* libPods-AIRadioMobile-tvOSTests.a in Frameworks */,
+				BA7801F39B53991339645724 /* libPods-AIRadioMobile-tvOSTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		006EBCE8F33D2439D7C033B7 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				B22401D051125BA91CDFDC89 /* Pods-AIRadioMobile.debug.xcconfig */,
-				621B3720390D860D4AA81584 /* Pods-AIRadioMobile.release.xcconfig */,
-				DF7B7E823E69EC91C7EF83E8 /* Pods-AIRadioMobile-tvOS.debug.xcconfig */,
-				ECB3C1C44BDB5F77C1E019CF /* Pods-AIRadioMobile-tvOS.release.xcconfig */,
-				29211E3131E84ACE5A3DBEAE /* Pods-AIRadioMobile-tvOSTests.debug.xcconfig */,
-				FE243E08FC67648B28E354BF /* Pods-AIRadioMobile-tvOSTests.release.xcconfig */,
-				7ADBC97524B707DEE9ECDDF9 /* Pods-AIRadioMobileTests.debug.xcconfig */,
-				3A39E127E62F51C823E01AC6 /* Pods-AIRadioMobileTests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		00C302A81ABCB8CE00DB3ED1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -490,6 +496,22 @@
 				00E356F11AD99517003FC87E /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		079A99EA206EE4EB009B4E7D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				079A99EE206EE4EB009B4E7D /* libRCTCameraRoll.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		079A99F1206EF0FA009B4E7D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				079A99F5206EF0FA009B4E7D /* libRNFetchBlob.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		139105B71AF99BAD00B5F7CC /* Products */ = {
@@ -552,11 +574,14 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				079A9A9D206EFFEA009B4E7D /* libReact.a */,
+				079A99F0206EF0FA009B4E7D /* RNFetchBlob.xcodeproj */,
+				079A99E9206EE4EB009B4E7D /* RCTCameraRoll.xcodeproj */,
 				2D16E6891FA4F8E400B85C8A /* libReact.a */,
-				D1FE08658A9D967698DBDF5C /* libPods-AIRadioMobile.a */,
-				F8D9F6B322435E43DD02381F /* libPods-AIRadioMobile-tvOS.a */,
-				046F517AD2183416983E4920 /* libPods-AIRadioMobile-tvOSTests.a */,
-				01592610F2DE1AE04FA4CEDE /* libPods-AIRadioMobileTests.a */,
+				F251D13F762814096848F446 /* libPods-AIRadioMobile.a */,
+				5B90115C79DAD34873A762BB /* libPods-AIRadioMobile-tvOS.a */,
+				0F084D8351FF6C96934586A0 /* libPods-AIRadioMobile-tvOSTests.a */,
+				CBB95E5078952E13C79B107A /* libPods-AIRadioMobileTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -615,7 +640,7 @@
 				00E356EF1AD99517003FC87E /* AIRadioMobileTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
-				006EBCE8F33D2439D7C033B7 /* Pods */,
+				FE483C70C5C9C0591BE4BF03 /* Pods */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -642,6 +667,21 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		FE483C70C5C9C0591BE4BF03 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1F524BAF08EABB5DA743677D /* Pods-AIRadioMobile.debug.xcconfig */,
+				077BD43A2E0ED1CA34626C74 /* Pods-AIRadioMobile.release.xcconfig */,
+				9BC162B933D3683A86D022CB /* Pods-AIRadioMobile-tvOS.debug.xcconfig */,
+				F62FDA24ED186EA88271FB4F /* Pods-AIRadioMobile-tvOS.release.xcconfig */,
+				964E0717DCD30A389A581DD9 /* Pods-AIRadioMobile-tvOSTests.debug.xcconfig */,
+				3CB946D9E95CB09F5DDC1CEC /* Pods-AIRadioMobile-tvOSTests.release.xcconfig */,
+				F19E451D22514D3F92D56C87 /* Pods-AIRadioMobileTests.debug.xcconfig */,
+				AC81BC3FDAD3EF588C784D19 /* Pods-AIRadioMobileTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -649,12 +689,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "AIRadioMobileTests" */;
 			buildPhases = (
-				D4143D8B75CBFC056637C5CC /* [CP] Check Pods Manifest.lock */,
+				4BA8EFBEA3A3C261F63CFD5C /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				00B50C382934EBA7751B40D2 /* [CP] Embed Pods Frameworks */,
-				588A7483CDA455E942C95048 /* [CP] Copy Pods Resources */,
+				20D4E36176C7A31D92560D13 /* [CP] Embed Pods Frameworks */,
+				EA8BB30E1AC22ADDD9F5A2B1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -670,13 +710,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "AIRadioMobile" */;
 			buildPhases = (
-				DD744749E4BC4724944D061E /* [CP] Check Pods Manifest.lock */,
+				F010C93D6A068E611C64F418 /* [CP] Check Pods Manifest.lock */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				D1F30D094D6A735B93C5D97F /* [CP] Embed Pods Frameworks */,
-				4B2D75216EC9A13345ADE44A /* [CP] Copy Pods Resources */,
+				FE54FA1BF90387A595F94ECE /* [CP] Embed Pods Frameworks */,
+				8BAD322317331119FAE51351 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -691,13 +731,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "AIRadioMobile-tvOS" */;
 			buildPhases = (
-				9A7C4FF43DCF22D2893F538F /* [CP] Check Pods Manifest.lock */,
+				502B3DCA212A71CABBE78568 /* [CP] Check Pods Manifest.lock */,
 				2D02E4771E0B4A5D006451C7 /* Sources */,
 				2D02E4781E0B4A5D006451C7 /* Frameworks */,
 				2D02E4791E0B4A5D006451C7 /* Resources */,
 				2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */,
-				84C78952B599F1B3FA280921 /* [CP] Embed Pods Frameworks */,
-				A2C9EB3516E8B2402FC4DF53 /* [CP] Copy Pods Resources */,
+				7E8BD3F6E827CAEEAE905989 /* [CP] Embed Pods Frameworks */,
+				E1BBB8EBD5FBCE78127D30FB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -712,12 +752,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "AIRadioMobile-tvOSTests" */;
 			buildPhases = (
-				4A631D2D45F532EAFA27CBE5 /* [CP] Check Pods Manifest.lock */,
+				C268E6EB8A1D67A4734ABA07 /* [CP] Check Pods Manifest.lock */,
 				2D02E48C1E0B4A5D006451C7 /* Sources */,
 				2D02E48D1E0B4A5D006451C7 /* Frameworks */,
 				2D02E48E1E0B4A5D006451C7 /* Resources */,
-				6C646AF8852150B06E061FC3 /* [CP] Embed Pods Frameworks */,
-				A251E9382EBFC45DDA705BB7 /* [CP] Copy Pods Resources */,
+				3F322DB62EAA27A6640A5733 /* [CP] Embed Pods Frameworks */,
+				B57DB56F21F234D9900EA87C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -781,6 +821,10 @@
 					ProjectRef = ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */;
 				},
 				{
+					ProductGroup = 079A99EA206EE4EB009B4E7D /* Products */;
+					ProjectRef = 079A99E9206EE4EB009B4E7D /* RCTCameraRoll.xcodeproj */;
+				},
+				{
 					ProductGroup = 00C302B61ABCB90400DB3ED1 /* Products */;
 					ProjectRef = 00C302B51ABCB90400DB3ED1 /* RCTGeolocation.xcodeproj */;
 				},
@@ -815,6 +859,10 @@
 				{
 					ProductGroup = 146834001AC3E56700842450 /* Products */;
 					ProjectRef = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+				},
+				{
+					ProductGroup = 079A99F1206EF0FA009B4E7D /* Products */;
+					ProjectRef = 079A99F0206EF0FA009B4E7D /* RNFetchBlob.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -917,6 +965,20 @@
 			fileType = archive.ar;
 			path = "libprivatedata-tvOS.a";
 			remoteRef = 079A99E7206EA007009B4E7D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		079A99EE206EE4EB009B4E7D /* libRCTCameraRoll.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTCameraRoll.a;
+			remoteRef = 079A99ED206EE4EB009B4E7D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		079A99F5206EF0FA009B4E7D /* libRNFetchBlob.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNFetchBlob.a;
+			remoteRef = 079A99F4206EF0FA009B4E7D /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		139105C11AF99BAD00B5F7CC /* libRCTSettings.a */ = {
@@ -1124,21 +1186,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		00B50C382934EBA7751B40D2 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AIRadioMobileTests/Pods-AIRadioMobileTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1152,6 +1199,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
+		};
+		20D4E36176C7A31D92560D13 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AIRadioMobileTests/Pods-AIRadioMobileTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 		2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1167,55 +1229,7 @@
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
 		};
-		4A631D2D45F532EAFA27CBE5 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-AIRadioMobile-tvOSTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4B2D75216EC9A13345ADE44A /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AIRadioMobile/Pods-AIRadioMobile-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		588A7483CDA455E942C95048 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AIRadioMobileTests/Pods-AIRadioMobileTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6C646AF8852150B06E061FC3 /* [CP] Embed Pods Frameworks */ = {
+		3F322DB62EAA27A6640A5733 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1230,85 +1244,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AIRadioMobile-tvOSTests/Pods-AIRadioMobile-tvOSTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		84C78952B599F1B3FA280921 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AIRadioMobile-tvOS/Pods-AIRadioMobile-tvOS-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9A7C4FF43DCF22D2893F538F /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-AIRadioMobile-tvOS-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A251E9382EBFC45DDA705BB7 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AIRadioMobile-tvOSTests/Pods-AIRadioMobile-tvOSTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A2C9EB3516E8B2402FC4DF53 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AIRadioMobile-tvOS/Pods-AIRadioMobile-tvOS-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D1F30D094D6A735B93C5D97F /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AIRadioMobile/Pods-AIRadioMobile-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D4143D8B75CBFC056637C5CC /* [CP] Check Pods Manifest.lock */ = {
+		4BA8EFBEA3A3C261F63CFD5C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1326,7 +1262,118 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DD744749E4BC4724944D061E /* [CP] Check Pods Manifest.lock */ = {
+		502B3DCA212A71CABBE78568 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AIRadioMobile-tvOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7E8BD3F6E827CAEEAE905989 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AIRadioMobile-tvOS/Pods-AIRadioMobile-tvOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8BAD322317331119FAE51351 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AIRadioMobile/Pods-AIRadioMobile-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B57DB56F21F234D9900EA87C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AIRadioMobile-tvOSTests/Pods-AIRadioMobile-tvOSTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C268E6EB8A1D67A4734ABA07 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AIRadioMobile-tvOSTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E1BBB8EBD5FBCE78127D30FB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AIRadioMobile-tvOS/Pods-AIRadioMobile-tvOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EA8BB30E1AC22ADDD9F5A2B1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AIRadioMobileTests/Pods-AIRadioMobileTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F010C93D6A068E611C64F418 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1342,6 +1389,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FE54FA1BF90387A595F94ECE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AIRadioMobile/Pods-AIRadioMobile-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1411,7 +1473,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7ADBC97524B707DEE9ECDDF9 /* Pods-AIRadioMobileTests.debug.xcconfig */;
+			baseConfigurationReference = F19E451D22514D3F92D56C87 /* Pods-AIRadioMobileTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1432,7 +1494,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3A39E127E62F51C823E01AC6 /* Pods-AIRadioMobileTests.release.xcconfig */;
+			baseConfigurationReference = AC81BC3FDAD3EF588C784D19 /* Pods-AIRadioMobileTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -1450,7 +1512,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B22401D051125BA91CDFDC89 /* Pods-AIRadioMobile.debug.xcconfig */;
+			baseConfigurationReference = 1F524BAF08EABB5DA743677D /* Pods-AIRadioMobile.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1471,7 +1533,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 621B3720390D860D4AA81584 /* Pods-AIRadioMobile.release.xcconfig */;
+			baseConfigurationReference = 077BD43A2E0ED1CA34626C74 /* Pods-AIRadioMobile.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1491,7 +1553,7 @@
 		};
 		2D02E4971E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DF7B7E823E69EC91C7EF83E8 /* Pods-AIRadioMobile-tvOS.debug.xcconfig */;
+			baseConfigurationReference = 9BC162B933D3683A86D022CB /* Pods-AIRadioMobile-tvOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1518,7 +1580,7 @@
 		};
 		2D02E4981E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ECB3C1C44BDB5F77C1E019CF /* Pods-AIRadioMobile-tvOS.release.xcconfig */;
+			baseConfigurationReference = F62FDA24ED186EA88271FB4F /* Pods-AIRadioMobile-tvOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1545,7 +1607,7 @@
 		};
 		2D02E4991E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 29211E3131E84ACE5A3DBEAE /* Pods-AIRadioMobile-tvOSTests.debug.xcconfig */;
+			baseConfigurationReference = 964E0717DCD30A389A581DD9 /* Pods-AIRadioMobile-tvOSTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1567,7 +1629,7 @@
 		};
 		2D02E49A1E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FE243E08FC67648B28E354BF /* Pods-AIRadioMobile-tvOSTests.release.xcconfig */;
+			baseConfigurationReference = 3CB946D9E95CB09F5DDC1CEC /* Pods-AIRadioMobile-tvOSTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;

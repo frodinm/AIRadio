@@ -1,5 +1,10 @@
-import SocketIOClient from 'socket.io-client';
-
-export const appConnection = () =>{
-    const connection = SocketIOClient("")
-}
+export const appConnection= (socket) => ({
+    personnality: (text)=>{
+        console.log(socket);
+        socket.emit('text', text);
+       
+    },
+    image: (image)=>{   
+        socket.emit('image', image);
+    }
+});
